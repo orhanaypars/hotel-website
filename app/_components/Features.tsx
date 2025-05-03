@@ -11,7 +11,7 @@ const Features: React.FC = () => {
         </h1>
       </div>
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-center gap-6 pt-14">
+        <div className="flex flex-wrap items-center justify-center gap-15 md:gap-6 pt-14">
           {/* Card 1 */}
           <div className="text-sm w-full sm:w-80 border border-gray-500/30 pb-6 rounded-lg bg-white shadow-md">
             <div className="flex flex-col items-center px-5 py-4 relative">
@@ -26,15 +26,14 @@ const Features: React.FC = () => {
               </div>
               <div className="pt-8 text-center">
                 <h1 className="text-lg font-medium text-gray-800">
-                  Donald Jackman
+                  Ahmet Yılmaz
                 </h1>
-                <p className="text-gray-800/80">Content Creator</p>
+                <p className="text-gray-800/80">Seyahat Bloggerı</p>
               </div>
             </div>
             <p className="text-gray-500 px-6 text-center">
-              I&apos;ve been using imagify for nearly two years, primarily for
-              Instagram, and it has been incredibly user-friendly, making my
-              work much easier.
+              Otelinizde geçirdiğim zaman harikaydı. Personel çok güler yüzlü ve
+              odalar çok temizdi.
             </p>
             <div className="flex justify-center pt-4">
               <div className="flex gap-0.5">
@@ -105,15 +104,14 @@ const Features: React.FC = () => {
               </div>
               <div className="pt-8 text-center">
                 <h1 className="text-lg font-medium text-gray-800">
-                  Richard Nelson
+                  Elif Demir
                 </h1>
-                <p className="text-gray-800/80">Instagram Influencer</p>
+                <p className="text-gray-800/80">Fotoğrafçı</p>
               </div>
             </div>
             <p className="text-gray-500 px-6 text-center">
-              I&apos;ve been using imagify for nearly two years, primarily for
-              Instagram, and it has been incredibly user-friendly, making my
-              work much easier.
+              Manzara muhteşemdi ve yemekler çok lezzetliydi. Kesinlikle tekrar
+              geleceğim.
             </p>
             <div className="flex justify-center pt-4">
               <div className="flex gap-0.5">
@@ -184,15 +182,14 @@ const Features: React.FC = () => {
               </div>
               <div className="pt-8 text-center">
                 <h1 className="text-lg font-medium text-gray-800">
-                  James Washington
+                  Mehmet Kaya
                 </h1>
-                <p className="text-gray-800/80">Marketing Manager</p>
+                <p className="text-gray-800/80">İşletme Müdürü</p>
               </div>
             </div>
             <p className="text-gray-500 px-6 text-center">
-              I&apos;ve been using imagify for nearly two years, primarily for
-              Instagram, and it has been incredibly user-friendly, making my
-              work much easier.
+              İş seyahatim sırasında otelinizde kaldım ve çok memnun kaldım.
+              Hizmet kalitesi mükemmeldi.
             </p>
             <div className="flex justify-center pt-4">
               <div className="flex gap-0.5">

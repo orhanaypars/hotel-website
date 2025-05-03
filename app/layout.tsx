@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import Footer from "./_components/Footer";
 import Navbar from "./_components/Navbar";
@@ -30,6 +31,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
