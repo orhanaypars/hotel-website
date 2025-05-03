@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
       "example.com",
       "unsplash.com",
       "images.unsplash.com",
+      "plus.unsplash.com",
+      "images.remotePatterns",
     ],
   },
   /* config options here */

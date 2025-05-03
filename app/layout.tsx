@@ -26,7 +26,7 @@ export default function RootLayout({
       style={{ backgroundImage: "url('/hero-background.jpg')" }}
     >
       <body>
-        <div className="min-h-screen mb-20">
+        <div className="min-h-screen ">
           <Navbar />
           {children}
         </div>

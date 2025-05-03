@@ -37,13 +37,18 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Links */}
           <ul className="hidden md:flex space-x-8 font-medium text-white">
-            {["Home", "Services", "Portfolio", "Pricing"].map((link) => (
-              <li key={link}>
+            {[
+              { name: "Anasayfa", href: "/" },
+              { name: "Galeri", href: "/gallery" },
+              { name: "Hakkımızda", href: "/about" },
+              { name: "İletişim", href: "/contact" },
+            ].map((link) => (
+              <li key={link.name}>
                 <Link
-                  href="#"
+                  href={link.href}
                   className="hover:text-indigo-600 transition-colors"
                 >
-                  {link}
+                  {link.name}
                 </Link>
               </li>
             ))}
@@ -51,13 +56,15 @@ const Navbar: React.FC = () => {
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            <Button
-              // variant="outline"
-              size="lg"
-              className="hidden md:inline-flex"
-            >
-              Rezervasyon yap
-            </Button>
+            <Link href="/reservation">
+              <Button
+                // variant="outline"
+                size="lg"
+                className="hidden md:inline-flex cursor-pointer bg-amber-500 text-blue-950 font-bold hover:bg-blue-950 hover:text-amber-500 transition-colors"
+              >
+                Rezervasyon yap
+              </Button>
+            </Link>
 
             {/* Mobile Menu Button */}
             <div className="flex md:hidden">
@@ -69,28 +76,24 @@ const Navbar: React.FC = () => {
                 </SheetTrigger>
                 <SheetContent className="bg-blue-900 text-white">
                   <SheetHeader>
-                    <SheetTitle className="text-lg font-semibold border-b-3 border-b-white">
+                    <SheetTitle className="text-lg font-bold text-amber-500 border-b-3 border-b-white">
                       Menu
                     </SheetTitle>
                   </SheetHeader>
                   <div className="py-4">
-                    <ul className="space-y-6 font-medium text-lg">
+                    <ul className="space-y-6 font-medium text-lg pl-5">
                       {[
-                        { name: "Home", icon: "🏠" },
-                        { name: "Services", icon: "🛠️" },
-                        { name: "Portfolio", icon: "📁" },
-                        { name: "Pricing", icon: "💰" },
-                      ].map((item) => (
-                        <li
-                          key={item.name}
-                          className="flex items-center space-x-3"
-                        >
-                          <span className="text-xl">{item.icon}</span>
+                        { name: "Anasayfa", href: "/" },
+                        { name: "Galeri", href: "/gallery" },
+                        { name: "Hakkımızda", href: "/about" },
+                        { name: "İletişim", href: "/contact" },
+                      ].map((link) => (
+                        <li key={link.name}>
                           <Link
-                            href="#"
-                            className="hover:text-indigo-400 transition-colors block"
+                            href={link.href}
+                            className="hover:text-indigo-600 transition-colors"
                           >
-                            {item.name}
+                            {link.name}
                           </Link>
                         </li>
                       ))}
@@ -98,12 +101,14 @@ const Navbar: React.FC = () => {
                   </div>
                   <SheetFooter>
                     <SheetClose asChild>
-                      <Button
-                        variant="outline"
-                        className="w-full bg-amber-500 text-blue-950 font-bold"
-                      >
-                        Rezervasyon yap
-                      </Button>
+                      <Link href="/reservation">
+                        <Button
+                          variant="outline"
+                          className="w-full bg-amber-500 text-blue-950 font-bold cursor-pointer hover:bg-blue-950 hover:text-amber-500 transition-colors"
+                        >
+                          Rezervasyon yap
+                        </Button>
+                      </Link>
                     </SheetClose>
                   </SheetFooter>
                 </SheetContent>

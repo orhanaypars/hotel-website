@@ -28,7 +28,6 @@ const Features: React.FC = () => {
                 <h1 className="text-lg font-medium text-gray-800">
                   Ahmet Yılmaz
                 </h1>
-                <p className="text-gray-800/80">Seyahat Bloggerı</p>
               </div>
             </div>
             <p className="text-gray-500 px-6 text-center">
@@ -106,7 +105,6 @@ const Features: React.FC = () => {
                 <h1 className="text-lg font-medium text-gray-800">
                   Elif Demir
                 </h1>
-                <p className="text-gray-800/80">Fotoğrafçı</p>
               </div>
             </div>
             <p className="text-gray-500 px-6 text-center">
@@ -184,7 +182,6 @@ const Features: React.FC = () => {
                 <h1 className="text-lg font-medium text-gray-800">
                   Mehmet Kaya
                 </h1>
-                <p className="text-gray-800/80">İşletme Müdürü</p>
               </div>
             </div>
             <p className="text-gray-500 px-6 text-center">

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <div className="text-white bg-blue-900 pt-8 px-6 md:px-16 lg:px-24 xl:px-32">
+    <div className="text-white bg-blue-900 pt-8 px-6 md:px-16 lg:px-24 xl:px-32 mt-0">
       <div className="flex flex-wrap justify-between gap-12 md:gap-6">
         <div>
           <Image
@@ -43,19 +43,44 @@ const Footer: React.FC = () => {
           <p className="text-lg text-amber-600 font-bold">OTELİMİZ</p>
           <ul className="mt-3 flex flex-col gap-2 text-sm">
             <li>
-              <Link href="#">Hakkımızda</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                Hakkımızda
+              </Link>
             </li>
             <li>
-              <Link href="#">Kariyer</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                Kariyer
+              </Link>
             </li>
             <li>
-              <Link href="#">Basın</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                Basın
+              </Link>
             </li>
             <li>
-              <Link href="#">Blog</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                Blog
+              </Link>
             </li>
             <li>
-              <Link href="#">Ortaklarımız</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                Ortaklarımız
+              </Link>
             </li>
           </ul>
         </div>
@@ -64,19 +89,44 @@ const Footer: React.FC = () => {
           <p className="text-lg text-amber-600 font-bold">DESTEK</p>
           <ul className="mt-3 flex flex-col gap-2 text-sm">
             <li>
-              <Link href="#">Yardım Merkezi</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                Yardım Merkezi
+              </Link>
             </li>
             <li>
-              <Link href="#">Güvenlik Bilgileri</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                Güvenlik Bilgileri
+              </Link>
             </li>
             <li>
-              <Link href="#">İptal Seçenekleri</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                İptal Seçenekleri
+              </Link>
             </li>
             <li>
-              <Link href="#">Bize Ulaşın</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                Bize Ulaşın
+              </Link>
             </li>
             <li>
-              <Link href="#">Erişilebilirlik</Link>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                Erişilebilirlik
+              </Link>
             </li>
           </ul>
         </div>
@@ -121,13 +171,28 @@ const Footer: React.FC = () => {
         <p>© {new Date().getFullYear()} Butik Otel. Tüm hakları saklıdır.</p>
         <ul className="flex items-center gap-4">
           <li>
-            <Link href="#">Gizlilik</Link>
+            <Link
+              href="#"
+              className="hover:text-amber-500 transition-colors duration-300"
+            >
+              Gizlilik
+            </Link>
           </li>
           <li>
-            <Link href="#">Şartlar</Link>
+            <Link
+              href="#"
+              className="hover:text-amber-500 transition-colors duration-300"
+            >
+              Şartlar
+            </Link>
           </li>
           <li>
-            <Link href="#">Site Haritası</Link>
+            <Link
+              href="#"
+              className="hover:text-amber-500 transition-colors duration-300"
+            >
+              Site Haritası
+            </Link>
           </li>
         </ul>
       </div>
