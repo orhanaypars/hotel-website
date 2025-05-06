@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="hover:text-indigo-600 transition-colors"
+                  className="hover:text-amber-500 transition-colors"
                 >
                   {link.name}
                 </Link>

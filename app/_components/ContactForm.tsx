@@ -4,7 +4,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
-// Form verisi arayüzü
 interface ContactFormData {
   name: string;
   email: string;
