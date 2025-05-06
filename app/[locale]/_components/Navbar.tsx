@@ -13,6 +13,7 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useTranslations } from "next-intl";
 import { Link as I18nLink } from "@/i18n/navigation";
+import LanguageToggle from "@/components/LanguageToggle";
 
 const Navbar: React.FC = () => {
   const t = useTranslations("Navbar");
@@ -58,7 +59,8 @@ const Navbar: React.FC = () => {
           </ul>
 
           {/* Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 md:space-x-4 lg:space-x-6 xl:space-x-10">
+            <LanguageToggle />
             <Link href="/reservation">
               <Button
                 size="lg"
