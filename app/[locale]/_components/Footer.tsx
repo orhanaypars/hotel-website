@@ -2,23 +2,23 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const Footer: React.FC = () => {
+  const t = useTranslations("Footer");
+
   return (
     <div className="text-white bg-blue-900 pt-8 px-6 md:px-16 lg:px-24 xl:px-32 mt-0">
       <div className="flex flex-wrap justify-between gap-12 md:gap-6">
         <div>
           <Image
             src="/logo.png"
-            alt="logo"
+            alt={t("logoAlt")}
             width={200}
             height={306}
             className="mb-4 "
           />
-          <p className="text-sm">
-            Butik otelimizde, konfor ve huzuru bir arada sunuyoruz. Eşsiz bir
-            deneyim için sizi bekliyoruz.
-          </p>
+          <p className="text-sm">{t("description")}</p>
           <div className="flex items-center gap-3 mt-4">
             {/* Instagram */}
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -40,108 +40,57 @@ const Footer: React.FC = () => {
         </div>
 
         <div>
-          <p className="text-lg text-amber-600 font-bold">OTELİMİZ</p>
+          <p className="text-lg text-amber-600 font-bold">
+            {t("ourHotel.title")}
+          </p>
           <ul className="mt-3 flex flex-col gap-2 text-sm">
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                Hakkımızda
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                Kariyer
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                Basın
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                Ortaklarımız
-              </Link>
-            </li>
+            {["aboutUs", "career", "press", "blog", "partners"].map((key) => (
+              <li key={key}>
+                <Link
+                  href="#"
+                  className="hover:text-amber-500 transition-colors duration-300"
+                >
+                  {t(`ourHotel.${key}`)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
-          <p className="text-lg text-amber-600 font-bold">DESTEK</p>
+          <p className="text-lg text-amber-600 font-bold">
+            {t("support.title")}
+          </p>
           <ul className="mt-3 flex flex-col gap-2 text-sm">
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                Yardım Merkezi
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                Güvenlik Bilgileri
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                İptal Seçenekleri
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                Bize Ulaşın
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-amber-500 transition-colors duration-300"
-              >
-                Erişilebilirlik
-              </Link>
-            </li>
+            {[
+              "helpCenter",
+              "securityInfo",
+              "cancellationOptions",
+              "contactUs",
+              "accessibility",
+            ].map((key) => (
+              <li key={key}>
+                <Link
+                  href="#"
+                  className="hover:text-amber-500 transition-colors duration-300"
+                >
+                  {t(`support.${key}`)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className="max-w-80">
-          <p className="text-lg text-amber-600 font-bold">GÜNCEL KALIN</p>
-          <p className="mt-3 text-sm">
-            İlham verici içerikler ve özel teklifler için bültenimize abone
-            olun.
+          <p className="text-lg text-amber-600 font-bold">
+            {t("stayUpdated.title")}
           </p>
+          <p className="mt-3 text-sm">{t("stayUpdated.description")}</p>
           <div className="flex items-center mt-4">
             <Input
               type="text"
               className="bg-white rounded-l text-black h-9 px-3 outline-none border-0 w-full md:w-auto"
-              placeholder="E-posta adresiniz"
+              placeholder={t("stayUpdated.placeholder")}
             />
             <Button className="flex items-center justify-center bg-black h-9 w-9 aspect-square rounded-r cursor-pointer">
               {/* Arrow icon */}
@@ -168,32 +117,20 @@ const Footer: React.FC = () => {
       </div>
       <hr className="border-gray-300 mt-8" />
       <div className="flex flex-col md:flex-row gap-2 items-center justify-between py-5">
-        <p>© {new Date().getFullYear()} Butik Otel. Tüm hakları saklıdır.</p>
+        <p>
+          © {new Date().getFullYear()} {t("copyright")}
+        </p>
         <ul className="flex items-center gap-4">
-          <li>
-            <Link
-              href="#"
-              className="hover:text-amber-500 transition-colors duration-300"
-            >
-              Gizlilik
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="hover:text-amber-500 transition-colors duration-300"
-            >
-              Şartlar
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="hover:text-amber-500 transition-colors duration-300"
-            >
-              Site Haritası
-            </Link>
-          </li>
+          {["privacy", "terms", "siteMap"].map((key) => (
+            <li key={key}>
+              <Link
+                href="#"
+                className="hover:text-amber-500 transition-colors duration-300"
+              >
+                {t(`footerLinks.${key}`)}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

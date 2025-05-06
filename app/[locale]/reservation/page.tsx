@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Label } from "@/components/ui/label";
+import { useTranslations } from "next-intl"; // Import next-intl
 
 interface ReservationFormData {
   email: string;
@@ -16,6 +17,7 @@ interface ReservationFormData {
 }
 
 const Reservation: React.FC = () => {
+  const t = useTranslations("Reservation"); // Initialize translations
   const {
     register,
     handleSubmit,
@@ -52,25 +54,19 @@ const Reservation: React.FC = () => {
       const response = await fetch("/api/reservation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: data.email,
-          checkIn: data.checkIn,
-          checkOut: data.checkOut,
-          guests: data.guests,
-          phone: data.phone,
-        }),
+        body: JSON.stringify(data),
       });
 
       if (!response.ok) {
-        throw new Error("Mesaj gönderilirken bir hata oluştu.");
+        throw new Error(t("error.message"));
       }
 
-      toast.success("Rezervasyon talebiniz başarıyla gönderildi!", {
+      toast.success(t("success.message"), {
         style: { backgroundColor: "#22c55e", color: "#ffffff" },
       });
     } catch (error) {
       console.error(error);
-      toast.error("Rezervasyon talebi gönderilemedi. Lütfen tekrar deneyin.", {
+      toast.error(t("error.retry"), {
         style: { backgroundColor: "#ef4444", color: "#ffffff" },
       });
     }
@@ -80,11 +76,11 @@ const Reservation: React.FC = () => {
     <div className="flex flex-col items-center text-center mt-12 mb-12 px-4 sm:px-8 lg:px-20">
       <div className="mb-12">
         <h1 className="text-4xl font-semibold text-blue-950">
-          Hızlıca <span className="text-amber-500 font-bold">rezervasyon</span>{" "}
-          talebinizi oluşturun.
+          {t("header.quickReservation")}{" "}
+          <span className="text-amber-500 font-bold">{t("header.create")}</span>
           <div className="mt-5"></div>
           <span className="text-5xl font-bold text-blue-950">
-            Ayrıcalıklı odalarımızda misafirimiz olun.
+            {t("header.beOurGuest")}
           </span>
         </h1>
       </div>
@@ -100,13 +96,13 @@ const Reservation: React.FC = () => {
               htmlFor="email"
               className="block mb-1 font-medium text-blue-950"
             >
-              E-posta
+              {t("form.email.label")}
             </Label>
             <Input
               id="email"
               type="email"
-              {...register("email", { required: "E-posta gerekli." })}
-              placeholder="ornek@gmail.com"
+              {...register("email", { required: t("form.email.required") })}
+              placeholder={t("form.email.placeholder")}
               className="border border-blue-950 focus:ring-amber-500"
             />
             {errors.email && (
@@ -122,13 +118,13 @@ const Reservation: React.FC = () => {
               htmlFor="phone"
               className="block mb-1 font-medium text-blue-950"
             >
-              Telefon
+              {t("form.phone.label")}
             </Label>
             <Input
               id="phone"
               type="tel"
-              {...register("phone", { required: "Telefon numarası gerekli." })}
-              placeholder="053X XXX XX XX"
+              {...register("phone", { required: t("form.phone.required") })}
+              placeholder={t("form.phone.placeholder")}
               className="border border-blue-950 focus:ring-amber-500"
             />
             {errors.phone && (
@@ -144,12 +140,12 @@ const Reservation: React.FC = () => {
               htmlFor="checkIn"
               className="block mb-1 font-medium text-blue-950"
             >
-              Giriş Tarihi
+              {t("form.checkIn.label")}
             </Label>
             <Input
               id="checkIn"
               type="date"
-              {...register("checkIn", { required: "Giriş tarihi gerekli." })}
+              {...register("checkIn", { required: t("form.checkIn.required") })}
               value={checkInDate}
               onChange={(e) => setCheckInDate(e.target.value)}
               min={today}
@@ -168,12 +164,14 @@ const Reservation: React.FC = () => {
               htmlFor="checkOut"
               className="block mb-1 font-medium text-blue-950"
             >
-              Çıkış Tarihi
+              {t("form.checkOut.label")}
             </Label>
             <Input
               id="checkOut"
               type="date"
-              {...register("checkOut", { required: "Çıkış tarihi gerekli." })}
+              {...register("checkOut", {
+                required: t("form.checkOut.required"),
+              })}
               value={checkOutDate}
               onChange={(e) => setCheckOutDate(e.target.value)}
               min={
@@ -202,17 +200,17 @@ const Reservation: React.FC = () => {
               htmlFor="guests"
               className="block mb-1 font-medium text-blue-950"
             >
-              Kişi Sayısı
+              {t("form.guests.label")}
             </Label>
             <Input
               id="guests"
               type="number"
               {...register("guests", {
-                required: "Kişi sayısı gerekli.",
-                min: { value: 1, message: "En az 1 kişi olmalı." },
-                max: { value: 4, message: "En fazla 4 kişi olabilir." },
+                required: t("form.guests.required"),
+                min: { value: 1, message: t("form.guests.min") },
+                max: { value: 4, message: t("form.guests.max") },
               })}
-              placeholder="2"
+              placeholder={t("form.guests.placeholder")}
               className="border border-blue-950 focus:ring-amber-500"
             />
             {errors.guests && (
@@ -229,7 +227,7 @@ const Reservation: React.FC = () => {
               disabled={isSubmitting}
               className="w-full md:w-auto rounded-md bg-amber-500 text-blue-950 py-2  flex items-center justify-center gap-2 hover:bg-blue-950 hover:text-white transition-colors duration-300"
             >
-              Talep oluştur
+              {t("form.submit")}
             </Button>
           </div>
         </div>

@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 interface ContactFormData {
   name: string;
@@ -15,6 +16,8 @@ interface ContactFormData {
 }
 
 function ContactPage() {
+  const t = useTranslations("Contact");
+
   const {
     register,
     handleSubmit,
@@ -32,10 +35,10 @@ function ContactPage() {
       });
 
       if (!response.ok) {
-        throw new Error("Mesaj gönderilirken bir hata oluştu.");
+        throw new Error(t("errorMessage"));
       }
 
-      toast.success("Mesajınız başarıyla gönderildi!", {
+      toast.success(t("successMessage"), {
         style: {
           backgroundColor: "#22c55e",
           color: "#ffffff",
@@ -44,7 +47,7 @@ function ContactPage() {
     } catch (error) {
       console.error(error);
 
-      toast.error("Mesaj gönderilemedi. Lütfen tekrar deneyin.", {
+      toast.error(t("errorRetryMessage"), {
         style: {
           backgroundColor: "#ef4444",
           color: "#ffffff",
@@ -60,41 +63,39 @@ function ContactPage() {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col items-center text-sm "
         >
-          <h1 className="text-5xl font-bold  pb-6 text-center">
-            Bizimle İletişime Geçin
-          </h1>
+          <h1 className="text-5xl font-bold  pb-6 text-center">{t("title")}</h1>
           <p className="text-base text-white text-center pb-12 italic font-light">
-            Email üzerinden saatler içerisinde hızlıca dönüş sağlamaktayız.
+            {t("subtitle")}
           </p>
 
           <div className="flex flex-col md:flex-row items-center gap-12 w-full max-w-3xl">
             <div className="w-full">
-              <Label htmlFor="name">Adınız</Label>
+              <Label htmlFor="name">{t("nameLabel")}</Label>
               <Input
                 {...register("name", {
-                  required: "Adınızı girmeniz gerekiyor",
+                  required: t("nameRequired"),
                 })}
                 className="h-14 p-4 mt-2 w-full border border-gray-600 rounded-lg outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-300 transition text-white bg-gray-800"
                 type="text"
-                placeholder="Adınızı girin"
+                placeholder={t("namePlaceholder")}
               />
               {errors.name && (
                 <p className="text-xs mt-1">{errors.name.message}</p>
               )}
             </div>
             <div className="w-full">
-              <Label htmlFor="email">E-posta Adresiniz</Label>
+              <Label htmlFor="email">{t("emailLabel")}</Label>
               <Input
                 {...register("email", {
-                  required: "E-posta adresinizi girmeniz gerekiyor",
+                  required: t("emailRequired"),
                   pattern: {
                     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                    message: "Geçerli bir e-posta adresi girin",
+                    message: t("emailInvalid"),
                   },
                 })}
                 className="h-14 p-4 mt-2 w-full border border-gray-600 rounded-lg outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-300 transition text-white bg-gray-800 "
                 type="email"
-                placeholder="E-posta adresinizi girin"
+                placeholder={t("emailPlaceholder")}
               />
               {errors.email && (
                 <p className=" text-xs mt-1">{errors.email.message}</p>
@@ -102,13 +103,13 @@ function ContactPage() {
             </div>
           </div>
           <div className="mt-8 w-full max-w-3xl">
-            <Label htmlFor="message">Mesajınız</Label>
+            <Label htmlFor="message">{t("messageLabel")}</Label>
             <Textarea
               {...register("message", {
-                required: "Mesajınızı girmeniz gerekiyor",
+                required: t("messageRequired"),
               })}
               className="w-full mt-2 p-4 h-48 border border-gray-600 rounded-lg resize-none outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-300 transition text-white bg-gray-800 "
-              placeholder="Mesajınızı girin"
+              placeholder={t("messagePlaceholder")}
             ></Textarea>
             {errors.message && (
               <p className=" text-xs mt-1">{errors.message.message}</p>
@@ -120,7 +121,7 @@ function ContactPage() {
             disabled={isSubmitting}
             className="mt-6 text-white bg-amber-600  h-14 w-full md:w-72 px-6 rounded-lg active:scale-95 transition disabled:opacity-50 cursor-pointer hover:bg-amber-700"
           >
-            {isSubmitting ? "Gönderiliyor..." : "Mesaj Gönder"}
+            {isSubmitting ? t("submitting") : t("submit")}
           </Button>
         </form>
       </div>

@@ -42,7 +42,8 @@
     "header": {
       "quickReservation": "Hızlı",
       "request": "Rezervasyon ile",
-      "beOurGuest": "Misafirimiz Olun"
+      "beOurGuest": "Misafirimiz Olun",
+      "create": "Rezervasyon Oluşturun"
     },
     "form": {
       "email": {
@@ -91,6 +92,113 @@
     "submitting": "Gönderiliyor...",
     "successMessage": "Mesajınız başarıyla gönderildi!",
     "failureMessage": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+    "errorMessage": "Mesaj gönderilirken bir hata oluştu."
+  },
+  "Features": {
+    "title": {
+      "part1": "Çok değerli",
+      "part2": "yorumlarınız"
+    },
+    "card1": {
+      "alt": "Kullanıcı Görseli 1",
+      "name": "Ahmet Yılmaz",
+      "comment": "Otelinizde geçirdiğim zaman harikaydı. Personel çok güler yüzlü ve odalar çok temizdi."
+    },
+    "card2": {
+      "alt": "Kullanıcı Görseli 2",
+      "name": "Elif Demir",
+      "comment": "Manzara muhteşemdi ve yemekler çok lezzetliydi. Kesinlikle tekrar geleceğim."
+    },
+    "card3": {
+      "alt": "Kullanıcı Görseli 3",
+      "name": "Mehmet Kaya",
+      "comment": "İş seyahatim sırasında otelinizde kaldım ve çok memnun kaldım. Hizmet kalitesi mükemmeldi."
+    }
+  },
+  "Footer": {
+    "logoAlt": "Otel Logosu",
+    "description": "Butik otelimizde, konfor ve huzuru bir arada sunuyoruz. Eşsiz bir deneyim için sizi bekliyoruz.",
+    "ourHotel": {
+      "title": "OTELİMİZ",
+      "aboutUs": "Hakkımızda",
+      "career": "Kariyer",
+      "press": "Basın",
+      "blog": "Blog",
+      "partners": "Ortaklarımız"
+    },
+    "support": {
+      "title": "DESTEK",
+      "helpCenter": "Yardım Merkezi",
+      "securityInfo": "Güvenlik Bilgileri",
+      "cancellationOptions": "İptal Seçenekleri",
+      "contactUs": "Bize Ulaşın",
+      "accessibility": "Erişilebilirlik"
+    },
+    "stayUpdated": {
+      "title": "GÜNCEL KALIN",
+      "description": "İlham verici içerikler ve özel teklifler için bültenimize abone olun.",
+      "placeholder": "E-posta adresiniz"
+    },
+    "copyright": "Butik Otel. Tüm hakları saklıdır.",
+    "footerLinks": {
+      "privacy": "Gizlilik",
+      "terms": "Şartlar",
+      "siteMap": "Site Haritası"
+    }
+  },
+  "Gallery": {
+    "title": "Otel Odaları ve Alanları",
+    "rooms": {
+      "deluxe": "Deluxe Oda",
+      "suite": "Süit Oda",
+      "standard": "Standart Oda",
+      "family": "Aile Odası",
+      "bathroom": "Banyo",
+      "kitchen": "Mutfak",
+      "livingRoom": "Oturma Odası",
+      "balcony": "Balkon",
+      "poolside": "Havuz Kenarı"
+    },
+    "labels": {
+      "mostPreferred": "En Çok Tercih Edilen",
+      "mostPreferredFromTeens": "Gençler Tarafından Tercih Edilen"
+    }
+  },
+  "About": {
+    "title": "Hakkımızda",
+    "description": "Butik otelimizi, misyonumuzu, vizyonumuzu ve sunduğumuz hizmetleri keşfedin.",
+    "missionTitle": "Misyonumuz",
+    "missionDescription": "Misafirlerimize olağanüstü misafirperverlik, konfor ve unutulmaz deneyimler sunmak.",
+    "visionTitle": "Vizyonumuz",
+    "visionDescription": "Kişiselleştirilmiş hizmet ve benzersiz deneyimlerle tanınan lider butik otel olmak.",
+    "servicesTitle": "Hizmetlerimiz",
+    "services": [
+      "Lüks ve konforlu odalar",
+      "Gurme yemek deneyimleri",
+      "Rahatlatıcı spa ve wellness olanakları",
+      "Etkinlik ve toplantı alanları",
+      "7/24 müşteri desteği"
+    ],
+    "contactTitle": "Bize Ulaşın",
+    "contactDescription": "Herhangi bir soru veya yardım için bizimle iletişime geçmekten çekinmeyin. Size yardımcı olmak için buradayız."
+  },
+  "Contact": {
+    "title": "Bize Ulaşın",
+    "subtitle": "E-posta yoluyla birkaç saat içinde hızlı bir şekilde yanıt veriyoruz.",
+    "nameLabel": "Adınız",
+    "namePlaceholder": "Adınızı girin",
+    "nameRequired": "Adınız gereklidir.",
+    "emailLabel": "E-posta Adresiniz",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "emailRequired": "E-posta adresiniz gereklidir.",
+    "emailInvalid": "Geçerli bir e-posta adresi girin.",
+    "messageLabel": "Mesajınız",
+    "messagePlaceholder": "Mesajınızı girin",
+    "messageRequired": "Mesajınız gereklidir.",
+    "submit": "Mesaj Gönder",
+    "submitting": "Gönderiliyor...",
+    "successMessage": "Mesajınız başarıyla gönderildi!",
+    "errorRetryMessage": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
     "errorMessage": "Mesaj gönderilirken bir hata oluştu."
   }
 }

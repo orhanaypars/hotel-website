@@ -92,5 +92,161 @@
     "successMessage": "Votre message a été envoyé avec succès !",
     "failureMessage": "L'envoi du message a échoué. Veuillez réessayer.",
     "errorMessage": "Une erreur s'est produite lors de l'envoi du message."
+  },
+  "Features": {
+    "title": {
+      "part1": "Des retours",
+      "part2": "très précieux"
+    },
+    "card1": {
+      "alt": "Image utilisateur 1",
+      "name": "Ahmet Yılmaz",
+      "comment": "Le temps que j'ai passé dans votre hôtel était incroyable. Le personnel était très amical et les chambres étaient très propres."
+    },
+    "card2": {
+      "alt": "Image utilisateur 2",
+      "name": "Elif Demir",
+      "comment": "La vue était magnifique et la nourriture était très délicieuse. Je reviendrai certainement."
+    },
+    "card3": {
+      "alt": "Image utilisateur 3",
+      "name": "Mehmet Kaya",
+      "comment": "J'ai séjourné dans votre hôtel lors de mon voyage d'affaires et j'étais très satisfait. La qualité du service était excellente."
+    }
+  },
+  "Footer": {
+    "logoAlt": "Logo de l'hôtel",
+    "description": "Dans notre hôtel boutique, nous offrons confort et tranquillité ensemble. Nous vous attendons pour une expérience unique.",
+    "ourHotel": {
+      "title": "NOTRE HÔTEL",
+      "aboutUs": "À propos de nous",
+      "career": "Carrière",
+      "press": "Presse",
+      "blog": "Blog",
+      "partners": "Partenaires"
+    },
+    "support": {
+      "title": "ASSISTANCE",
+      "helpCenter": "Centre d'aide",
+      "securityInfo": "Informations de sécurité",
+      "cancellationOptions": "Options d'annulation",
+      "contactUs": "Contactez-nous",
+      "accessibility": "Accessibilité"
+    },
+    "stayUpdated": {
+      "title": "RESTEZ INFORMÉ",
+      "description": "Abonnez-vous à notre newsletter pour des contenus inspirants et des offres exclusives.",
+      "placeholder": "Votre adresse e-mail"
+    },
+    "copyright": "Hôtel Boutique. Tous droits réservés.",
+    "footerLinks": {
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "siteMap": "Plan du site"
+    }
+  },
+  "Gallery": {
+    "title": "Chambres et espaces de l'hôtel",
+    "rooms": {
+      "deluxe": "Chambre Deluxe",
+      "suite": "Suite",
+      "standard": "Chambre Standard",
+      "family": "Chambre Familiale",
+      "bathroom": "Salle de bain",
+      "kitchen": "Cuisine",
+      "livingRoom": "Salon",
+      "balcony": "Balcon",
+      "poolside": "Bord de piscine"
+    },
+    "labels": {
+      "mostPreferred": "Le plus préféré",
+      "mostPreferredFromTeens": "Préféré par les adolescents"
+    }
+  },
+  "About": {
+    "title": "À propos de nous",
+    "description": "Découvrez notre hôtel boutique, notre mission, notre vision et les services que nous offrons.",
+    "missionTitle": "Notre mission",
+    "missionDescription": "Offrir à nos clients une hospitalité exceptionnelle, du confort et des expériences inoubliables.",
+    "visionTitle": "Notre vision",
+    "visionDescription": "Être le principal hôtel boutique, reconnu pour un service personnalisé et des expériences uniques.",
+    "servicesTitle": "Nos services",
+    "services": [
+      "Chambres luxueuses et confortables",
+      "Expériences gastronomiques",
+      "Installations de spa et de bien-être relaxantes",
+      "Espaces pour événements et réunions",
+      "Support client 24/7"
+    ],
+    "contactTitle": "Contactez-nous",
+    "contactDescription": "N'hésitez pas à nous contacter pour toute question ou assistance. Nous sommes là pour vous aider."
+  },
+  "Contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous répondons rapidement par e-mail en quelques heures.",
+    "nameLabel": "Votre nom",
+    "namePlaceholder": "Entrez votre nom",
+    "nameRequired": "Votre nom est requis.",
+    "emailLabel": "Votre adresse e-mail",
+    "emailPlaceholder": "Entrez votre adresse e-mail",
+    "emailRequired": "Votre adresse e-mail est requise.",
+    "emailInvalid": "Veuillez entrer une adresse e-mail valide.",
+    "messageLabel": "Votre message",
+    "messagePlaceholder": "Entrez votre message",
+    "messageRequired": "Votre message est requis.",
+    "submit": "Envoyer le message",
+    "submitting": "Envoi en cours...",
+    "successMessage": "Votre message a été envoyé avec succès !",
+    "errorRetryMessage": "L'envoi du message a échoué. Veuillez réessayer.",
+    "errorMessage": "Une erreur s'est produite lors de l'envoi du message."
+  },
+  "Reservation": {
+    "title": "Faire une réservation",
+    "subtitle": "Planifiez votre séjour et profitez d'une expérience inoubliable.",
+    "checkIn": "Date d'arrivée",
+    "checkOut": "Date de départ",
+    "guests": "Invités",
+    "bookNow": "Réservez maintenant",
+    "header": {
+      "quickReservation": "Réservation rapide",
+      "create": "Réservation",
+      "beOurGuest": "Soyez notre invité",
+      "request": "Demande"
+    },
+    "form": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Entrez votre adresse e-mail",
+        "required": "L'adresse e-mail est obligatoire."
+      },
+      "phone": {
+        "label": "Téléphone",
+        "placeholder": "Entrez votre numéro de téléphone",
+        "required": "Le numéro de téléphone est obligatoire."
+      },
+      "checkIn": {
+        "label": "Date d'arrivée",
+        "required": "La date d'arrivée est obligatoire."
+      },
+      "checkOut": {
+        "label": "Date de départ",
+        "required": "La date de départ est obligatoire."
+      },
+      "guests": {
+        "label": "Nombre d'invités",
+        "placeholder": "Entrez le nombre d'invités",
+        "required": "Le nombre d'invités est obligatoire.",
+        "min": "Au moins 1 invité est requis.",
+        "max": "Un maximum de 4 invités est autorisé."
+      },
+      "submit": "Envoyer"
+    },
+    "success": {
+      "message": "Réservation envoyée avec succès !"
+    },
+    "error": {
+      "message": "Une erreur s'est produite lors de l'envoi de la réservation.",
+      "retry": "L'envoi de la réservation a échoué. Veuillez réessayer."
+    }
   }
 }

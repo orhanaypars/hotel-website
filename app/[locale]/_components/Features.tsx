@@ -1,13 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const Features: React.FC = () => {
+  const t = useTranslations("Features");
+
   return (
     <div className="flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-10">
         <h1 className="text-5xl font-semibold text-blue-800 pb-4 text-center">
-          Çok değerli
-          <span className="text-amber-600 font-bold"> yorumlarınız</span>
+          {t("title.part1")}
+          <span className="text-amber-600 font-bold"> {t("title.part2")}</span>
         </h1>
       </div>
       <div className="px-4 sm:px-6 lg:px-8">
@@ -18,7 +21,7 @@ const Features: React.FC = () => {
               <div className="h-24 w-24 absolute -top-14 rounded-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200"
-                  alt="userImage1"
+                  alt={t("card1.alt")}
                   width={96}
                   height={96}
                   className="rounded-full"
@@ -26,13 +29,12 @@ const Features: React.FC = () => {
               </div>
               <div className="pt-8 text-center">
                 <h1 className="text-lg font-medium text-gray-800">
-                  Ahmet Yılmaz
+                  {t("card1.name")}
                 </h1>
               </div>
             </div>
             <p className="text-gray-500 px-6 text-center">
-              Otelinizde geçirdiğim zaman harikaydı. Personel çok güler yüzlü ve
-              odalar çok temizdi.
+              {t("card1.comment")}
             </p>
             <div className="flex justify-center pt-4">
               <div className="flex gap-0.5">
@@ -95,7 +97,7 @@ const Features: React.FC = () => {
               <div className="h-24 w-24 absolute -top-14 rounded-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200"
-                  alt="userImage2"
+                  alt={t("card2.alt")}
                   width={96}
                   height={96}
                   className="rounded-full"
@@ -103,13 +105,12 @@ const Features: React.FC = () => {
               </div>
               <div className="pt-8 text-center">
                 <h1 className="text-lg font-medium text-gray-800">
-                  Elif Demir
+                  {t("card2.name")}
                 </h1>
               </div>
             </div>
             <p className="text-gray-500 px-6 text-center">
-              Manzara muhteşemdi ve yemekler çok lezzetliydi. Kesinlikle tekrar
-              geleceğim.
+              {t("card2.comment")}
             </p>
             <div className="flex justify-center pt-4">
               <div className="flex gap-0.5">
@@ -172,7 +173,7 @@ const Features: React.FC = () => {
               <div className="h-24 w-24 absolute -top-14 rounded-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop"
-                  alt="userImage3"
+                  alt={t("card3.alt")}
                   width={96}
                   height={96}
                   className="rounded-full"
@@ -180,13 +181,12 @@ const Features: React.FC = () => {
               </div>
               <div className="pt-8 text-center">
                 <h1 className="text-lg font-medium text-gray-800">
-                  Mehmet Kaya
+                  {t("card3.name")}
                 </h1>
               </div>
             </div>
             <p className="text-gray-500 px-6 text-center">
-              İş seyahatim sırasında otelinizde kaldım ve çok memnun kaldım.
-              Hizmet kalitesi mükemmeldi.
+              {t("card3.comment")}
             </p>
             <div className="flex justify-center pt-4">
               <div className="flex gap-0.5">

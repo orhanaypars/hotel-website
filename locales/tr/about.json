@@ -1,0 +1,18 @@
+{
+  "title": "Hakkımızda",
+  "description": "Butik otelimiz, misafirlerimize eşsiz bir konfor ve huzur deneyimi sunmak için tasarlanmıştır. Doğanın kalbinde yer alan otelimiz, modern olanaklarla donatılmış odaları ve sıcak atmosferiyle unutulmaz bir konaklama deneyimi vaat ediyor. 2010 yılında kurulan otelimiz, yıllar içinde misafirlerimizin ihtiyaçlarına göre kendini sürekli yenileyerek hizmet kalitesini artırmıştır. İlk günden bu yana, misafirlerimize en iyi deneyimi sunmayı hedefleyen bir anlayışla çalışıyoruz. Doğal güzelliklerin içinde yer alan otelimiz, hem yerel hem de uluslararası misafirler için bir cazibe merkezi haline gelmiştir.",
+  "missionTitle": "Misyonumuz",
+  "missionDescription": "Misyonumuz, misafirlerimize evlerindeki rahatlığı ve huzuru yaşatırken, aynı zamanda onlara unutulmaz anılar biriktirme fırsatı sunmaktır. Her detayda kalite ve müşteri memnuniyetini ön planda tutuyoruz.",
+  "visionTitle": "Vizyonumuz",
+  "visionDescription": "Vizyonumuz, butik otelcilik sektöründe yenilikçi ve öncü bir marka olarak tanınmak ve misafirlerimize her zaman en iyi hizmeti sunmaktır.",
+  "servicesTitle": "Hizmetlerimiz",
+  "services": [
+    "Modern ve konforlu odalar",
+    "Gurme restoran ve yerel lezzetler",
+    "Spa ve wellness hizmetleri",
+    "Doğa yürüyüşleri ve aktiviteler",
+    "Özel etkinlik ve organizasyon alanları"
+  ],
+  "contactTitle": "İletişim",
+  "contactDescription": "Daha fazla bilgi almak veya rezervasyon yapmak için bizimle iletişime geçebilirsiniz. Sizi ağırlamaktan mutluluk duyarız!"
+}

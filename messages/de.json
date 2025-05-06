@@ -92,5 +92,161 @@
     "successMessage": "Ihre Nachricht wurde erfolgreich gesendet!",
     "failureMessage": "Das Senden der Nachricht ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
     "errorMessage": "Beim Senden der Nachricht ist ein Fehler aufgetreten."
+  },
+  "Features": {
+    "title": {
+      "part1": "Sehr wertvolles",
+      "part2": "Feedback"
+    },
+    "card1": {
+      "alt": "Benutzerbild 1",
+      "name": "Ahmet Yılmaz",
+      "comment": "Die Zeit, die ich in Ihrem Hotel verbracht habe, war fantastisch. Das Personal war sehr freundlich und die Zimmer waren sehr sauber."
+    },
+    "card2": {
+      "alt": "Benutzerbild 2",
+      "name": "Elif Demir",
+      "comment": "Die Aussicht war großartig und das Essen war sehr lecker. Ich werde definitiv wiederkommen."
+    },
+    "card3": {
+      "alt": "Benutzerbild 3",
+      "name": "Mehmet Kaya",
+      "comment": "Ich habe während meiner Geschäftsreise in Ihrem Hotel übernachtet und war sehr zufrieden. Die Servicequalität war ausgezeichnet."
+    }
+  },
+  "Footer": {
+    "logoAlt": "Hotel-Logo",
+    "description": "In unserem Boutique-Hotel bieten wir Komfort und Ruhe zugleich. Wir erwarten Sie für ein einzigartiges Erlebnis.",
+    "ourHotel": {
+      "title": "UNSER HOTEL",
+      "aboutUs": "Über uns",
+      "career": "Karriere",
+      "press": "Presse",
+      "blog": "Blog",
+      "partners": "Partner"
+    },
+    "support": {
+      "title": "UNTERSTÜTZUNG",
+      "helpCenter": "Hilfezentrum",
+      "securityInfo": "Sicherheitsinformationen",
+      "cancellationOptions": "Stornierungsoptionen",
+      "contactUs": "Kontaktieren Sie uns",
+      "accessibility": "Barrierefreiheit"
+    },
+    "stayUpdated": {
+      "title": "BLEIBEN SIE INFORMIERT",
+      "description": "Abonnieren Sie unseren Newsletter für inspirierende Inhalte und exklusive Angebote.",
+      "placeholder": "Ihre E-Mail-Adresse"
+    },
+    "copyright": "Boutique-Hotel. Alle Rechte vorbehalten.",
+    "footerLinks": {
+      "privacy": "Datenschutz",
+      "terms": "Bedingungen",
+      "siteMap": "Seitenübersicht"
+    }
+  },
+  "Gallery": {
+    "title": "Hotelzimmer und Bereiche",
+    "rooms": {
+      "deluxe": "Deluxe-Zimmer",
+      "suite": "Suite-Zimmer",
+      "standard": "Standard-Zimmer",
+      "family": "Familienzimmer",
+      "bathroom": "Badezimmer",
+      "kitchen": "Küche",
+      "livingRoom": "Wohnzimmer",
+      "balcony": "Balkon",
+      "poolside": "Poolbereich"
+    },
+    "labels": {
+      "mostPreferred": "Am beliebtesten",
+      "mostPreferredFromTeens": "Beliebt bei Jugendlichen"
+    }
+  },
+  "About": {
+    "title": "Über uns",
+    "description": "Erfahren Sie mehr über unser Boutique-Hotel, unsere Mission, Vision und die von uns angebotenen Dienstleistungen.",
+    "missionTitle": "Unsere Mission",
+    "missionDescription": "Unseren Gästen außergewöhnliche Gastfreundschaft, Komfort und unvergessliche Erlebnisse zu bieten.",
+    "visionTitle": "Unsere Vision",
+    "visionDescription": "Das führende Boutique-Hotel zu sein, bekannt für persönlichen Service und einzigartige Erlebnisse.",
+    "servicesTitle": "Unsere Dienstleistungen",
+    "services": [
+      "Luxuriöse und komfortable Zimmer",
+      "Gourmet-Dining-Erlebnisse",
+      "Entspannende Spa- und Wellness-Einrichtungen",
+      "Veranstaltungs- und Tagungsräume",
+      "24/7 Kundenservice"
+    ],
+    "contactTitle": "Kontaktieren Sie uns",
+    "contactDescription": "Zögern Sie nicht, uns bei Fragen oder Anliegen zu kontaktieren. Wir sind für Sie da."
+  },
+  "Contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir antworten schnell per E-Mail innerhalb weniger Stunden.",
+    "nameLabel": "Ihr Name",
+    "namePlaceholder": "Geben Sie Ihren Namen ein",
+    "nameRequired": "Ihr Name ist erforderlich.",
+    "emailLabel": "Ihre E-Mail-Adresse",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "emailRequired": "Ihre E-Mail-Adresse ist erforderlich.",
+    "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "messageLabel": "Ihre Nachricht",
+    "messagePlaceholder": "Geben Sie Ihre Nachricht ein",
+    "messageRequired": "Ihre Nachricht ist erforderlich.",
+    "submit": "Nachricht senden",
+    "submitting": "Wird gesendet...",
+    "successMessage": "Ihre Nachricht wurde erfolgreich gesendet!",
+    "errorRetryMessage": "Das Senden der Nachricht ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "errorMessage": "Beim Senden der Nachricht ist ein Fehler aufgetreten."
+  },
+  "Reservation": {
+    "title": "Reservierung vornehmen",
+    "subtitle": "Planen Sie Ihren Aufenthalt und genießen Sie ein unvergessliches Erlebnis.",
+    "checkIn": "Anreisedatum",
+    "checkOut": "Abreisedatum",
+    "guests": "Gäste",
+    "bookNow": "Jetzt buchen",
+    "header": {
+      "quickReservation": "Schnelle",
+      "create": "Reservierung",
+      "beOurGuest": "Seien Sie unser Gast",
+      "request": "Reservierungsanfrage"
+    },
+    "form": {
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+        "required": "E-Mail-Adresse ist erforderlich."
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "Geben Sie Ihre Telefonnummer ein",
+        "required": "Telefonnummer ist erforderlich."
+      },
+      "checkIn": {
+        "label": "Anreisedatum",
+        "required": "Anreisedatum ist erforderlich."
+      },
+      "checkOut": {
+        "label": "Abreisedatum",
+        "required": "Abreisedatum ist erforderlich."
+      },
+      "guests": {
+        "label": "Anzahl der Gäste",
+        "placeholder": "Geben Sie die Anzahl der Gäste ein",
+        "required": "Anzahl der Gäste ist erforderlich.",
+        "min": "Mindestens 1 Gast ist erforderlich.",
+        "max": "Maximal 4 Gäste sind erlaubt."
+      },
+      "submit": "Absenden"
+    },
+    "success": {
+      "message": "Reservierung erfolgreich übermittelt!"
+    },
+    "error": {
+      "message": "Beim Übermitteln der Reservierung ist ein Fehler aufgetreten.",
+      "retry": "Das Übermitteln der Reservierung ist fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
   }
 }

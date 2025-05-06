@@ -35,14 +35,11 @@
     "checkOut": "Check-Out Date",
     "guests": "Guests",
     "bookNow": "Book Now",
-    "toast": {
-      "success": "Reservation submitted successfully!",
-      "error": "An error occurred while submitting the reservation."
-    },
     "header": {
       "quickReservation": "Quick",
-      "request": "Reservation",
-      "beOurGuest": "Be Our Guest"
+      "create": "Reservation",
+      "beOurGuest": "Be Our Guest",
+      "request": "Reservation Request"
     },
     "form": {
       "email": {
@@ -71,6 +68,13 @@
         "max": "A maximum of 4 guests is allowed."
       },
       "submit": "Submit"
+    },
+    "success": {
+      "message": "Reservation submitted successfully!"
+    },
+    "error": {
+      "message": "An error occurred while submitting the reservation.",
+      "retry": "Failed to submit the reservation. Please try again."
     }
   },
   "ContactForm": {
@@ -92,5 +96,112 @@
     "successMessage": "Your message has been sent successfully!",
     "failureMessage": "Failed to send the message. Please try again.",
     "errorMessage": "An error occurred while sending the message."
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "We respond quickly via email within hours.",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "nameRequired": "Your name is required.",
+    "emailLabel": "Your Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "emailRequired": "Your email address is required.",
+    "emailInvalid": "Please enter a valid email address.",
+    "messageLabel": "Your Message",
+    "messagePlaceholder": "Enter your message",
+    "messageRequired": "Your message is required.",
+    "submit": "Send Message",
+    "submitting": "Submitting...",
+    "successMessage": "Your message has been sent successfully!",
+    "errorRetryMessage": "Failed to send the message. Please try again.",
+    "errorMessage": "An error occurred while sending the message."
+  },
+  "Features": {
+    "title": {
+      "part1": "Very valuable",
+      "part2": "feedback"
+    },
+    "card1": {
+      "alt": "User Image 1",
+      "name": "Ahmet Yılmaz",
+      "comment": "The time I spent at your hotel was amazing. The staff was very friendly, and the rooms were very clean."
+    },
+    "card2": {
+      "alt": "User Image 2",
+      "name": "Elif Demir",
+      "comment": "The view was magnificent, and the food was very delicious. I will definitely come again."
+    },
+    "card3": {
+      "alt": "User Image 3",
+      "name": "Mehmet Kaya",
+      "comment": "I stayed at your hotel during my business trip and was very satisfied. The service quality was excellent."
+    }
+  },
+  "Gallery": {
+    "title": "Hotel Rooms and Areas",
+    "rooms": {
+      "deluxe": "Deluxe Room",
+      "suite": "Suite Room",
+      "standard": "Standard Room",
+      "family": "Family Room",
+      "bathroom": "Bathroom",
+      "kitchen": "Kitchen",
+      "livingRoom": "Living Room",
+      "balcony": "Balcony",
+      "poolside": "Poolside"
+    },
+    "labels": {
+      "mostPreferred": "Most Preferred",
+      "mostPreferredFromTeens": "Preferred by Teens"
+    }
+  },
+  "Footer": {
+    "logoAlt": "Hotel Logo",
+    "description": "In our boutique hotel, we offer comfort and tranquility together. We are waiting for you for a unique experience.",
+    "ourHotel": {
+      "title": "OUR HOTEL",
+      "aboutUs": "About Us",
+      "career": "Career",
+      "press": "Press",
+      "blog": "Blog",
+      "partners": "Partners"
+    },
+    "support": {
+      "title": "SUPPORT",
+      "helpCenter": "Help Center",
+      "securityInfo": "Security Information",
+      "cancellationOptions": "Cancellation Options",
+      "contactUs": "Contact Us",
+      "accessibility": "Accessibility"
+    },
+    "stayUpdated": {
+      "title": "STAY UPDATED",
+      "description": "Subscribe to our newsletter for inspiring content and exclusive offers.",
+      "placeholder": "Your email address"
+    },
+    "copyright": "Boutique Hotel. All rights reserved.",
+    "footerLinks": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "siteMap": "Site Map"
+    }
+  },
+  "About": {
+    "title": "About Us",
+    "description": "Learn more about our boutique hotel, our mission, vision, and the services we offer.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "To provide our guests with exceptional hospitality, comfort, and unforgettable experiences.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "To be the leading boutique hotel known for personalized service and unique experiences.",
+    "servicesTitle": "Our Services",
+    "services": [
+      "Luxurious and comfortable rooms",
+      "Gourmet dining experiences",
+      "Relaxing spa and wellness facilities",
+      "Event and meeting spaces",
+      "24/7 customer support"
+    ],
+    "contactTitle": "Contact Us",
+    "contactDescription": "Feel free to reach out to us for any inquiries or assistance. We are here to help."
   }
 }
