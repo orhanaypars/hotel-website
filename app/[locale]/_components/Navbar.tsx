@@ -11,14 +11,18 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useTranslations } from "next-intl";
+import { Link as I18nLink } from "@/i18n/navigation";
 
 const Navbar: React.FC = () => {
+  const t = useTranslations("Navbar");
+
   return (
     <header className="w-full text-white">
       {/* Top Promo Banner */}
       <div className="bg-gradient-to-r from-violet-600 via-purple-700 to-blue-800 text-center text-xs sm:text-sm py-1">
-        Rezervasyona özel ilk konaklama ücretinde{" "}
-        <span className="font-semibold">%20 indirim</span>
+        {t("promoText")}{" "}
+        <span className="font-semibold">{t("promoDiscount")}</span>
       </div>
 
       {/* Main Navigation */}
@@ -28,28 +32,27 @@ const Navbar: React.FC = () => {
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
-              alt="Logo"
+              alt={t("logoAlt")}
               width={160}
               height={40}
               className="object-contain"
             />
           </Link>
-
           {/* Desktop Links */}
           <ul className="hidden md:flex space-x-8 font-medium text-white">
             {[
-              { name: "Anasayfa", href: "/" },
-              { name: "Galeri", href: "/gallery" },
-              { name: "Hakkımızda", href: "/about" },
-              { name: "İletişim", href: "/contact" },
+              { name: t("home"), href: "/" },
+              { name: t("gallery"), href: "/gallery" },
+              { name: t("about"), href: "/about" },
+              { name: t("contact"), href: "/contact" },
             ].map((link) => (
               <li key={link.name}>
-                <Link
+                <I18nLink
                   href={link.href}
                   className="hover:text-amber-500 transition-colors"
                 >
                   {link.name}
-                </Link>
+                </I18nLink>
               </li>
             ))}
           </ul>
@@ -58,11 +61,10 @@ const Navbar: React.FC = () => {
           <div className="flex items-center space-x-4">
             <Link href="/reservation">
               <Button
-                // variant="outline"
                 size="lg"
                 className="hidden md:inline-flex cursor-pointer bg-amber-500 text-blue-950 font-bold hover:bg-blue-950 hover:text-amber-500 transition-colors"
               >
-                Rezervasyon yap
+                {t("makeReservation")}
               </Button>
             </Link>
 
@@ -77,24 +79,24 @@ const Navbar: React.FC = () => {
                 <SheetContent className="bg-blue-900 text-white">
                   <SheetHeader>
                     <SheetTitle className="text-lg font-bold text-amber-500 border-b-3 border-b-white">
-                      Menu
+                      {t("menu")}
                     </SheetTitle>
                   </SheetHeader>
                   <div className="py-4">
                     <ul className="space-y-6 font-medium text-lg pl-5">
                       {[
-                        { name: "Anasayfa", href: "/" },
-                        { name: "Galeri", href: "/gallery" },
-                        { name: "Hakkımızda", href: "/about" },
-                        { name: "İletişim", href: "/contact" },
+                        { name: t("home"), href: "/" },
+                        { name: t("gallery"), href: "/gallery" },
+                        { name: t("about"), href: "/about" },
+                        { name: t("contact"), href: "/contact" },
                       ].map((link) => (
                         <li key={link.name}>
-                          <Link
+                          <I18nLink
                             href={link.href}
                             className="hover:text-indigo-600 transition-colors"
                           >
                             {link.name}
-                          </Link>
+                          </I18nLink>
                         </li>
                       ))}
                     </ul>
@@ -106,7 +108,7 @@ const Navbar: React.FC = () => {
                           variant="outline"
                           className="w-full bg-amber-500 text-blue-950 font-bold cursor-pointer hover:bg-blue-950 hover:text-amber-500 transition-colors"
                         >
-                          Rezervasyon yap
+                          {t("makeReservation")}
                         </Button>
                       </Link>
                     </SheetClose>

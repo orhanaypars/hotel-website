@@ -1,0 +1,13 @@
+{
+  "Navbar": {
+    "promoText": "Otelimize hoş geldiniz!",
+    "promoDiscount": "İlk rezervasyonunuzda %20 indirim kazanın!",
+    "logoAlt": "Otel Logosu",
+    "home": "Ana Sayfa",
+    "gallery": "Galeri",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "makeReservation": "Rezervasyon Yap",
+    "menu": "Menü"
+  }
+}

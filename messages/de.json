@@ -1,0 +1,13 @@
+{
+  "Navbar": {
+    "promoText": "Willkommen in unserem Hotel!",
+    "promoDiscount": "Sparen Sie 20 % bei Ihrer ersten Buchung!",
+    "logoAlt": "Hotel-Logo",
+    "home": "Startseite",
+    "gallery": "Galerie",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "makeReservation": "Reservierung vornehmen",
+    "menu": "Menü"
+  }
+}
