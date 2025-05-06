@@ -17,30 +17,26 @@ interface ReservationFormData {
 }
 
 const Reservation: React.FC = () => {
-  const t = useTranslations("Reservation"); // Initialize translations
+  const t = useTranslations("Reservation");
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<ReservationFormData>();
 
-  // State for date inputs
   const [checkInDate, setCheckInDate] = useState<string>("");
   const [checkOutDate, setCheckOutDate] = useState<string>("");
 
-  // Compute today's date in YYYY-MM-DD
   const today = new Date().toISOString().split("T")[0];
 
-  // Ensure check-out is always after check-in
   useEffect(() => {
     if (checkInDate) {
-      // If no check-out set, default to next day
       if (!checkOutDate) {
         const next = new Date(checkInDate);
         next.setDate(next.getDate() + 1);
         setCheckOutDate(next.toISOString().split("T")[0]);
       }
-      // If checkout <= checkin, bump checkout
+
       if (checkOutDate && checkOutDate <= checkInDate) {
         const next = new Date(checkInDate);
         next.setDate(next.getDate() + 1);

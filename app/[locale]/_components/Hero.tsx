@@ -16,7 +16,6 @@ export default function Hero() {
 
   return (
     <div className="container mx-auto px-4 sm:px-8 lg:px-20 mt-15 pb-12">
-      {/* Başlık ve Açıklama */}
       <section className="mt-8 md:mt-28 flex flex-col items-center text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
           {t("title")}
@@ -31,15 +30,7 @@ export default function Hero() {
           {t("description")}
         </p>
       </section>
-
-      {/* Ana Görsel */}
-      <div
-        className="w-full mx-auto mt-12 relative
-                max-w-full
-                sm:max-w-xl
-                md:max-w-2xl
-                lg:max-w-4xl"
-      >
+      <div className="w-full mx-auto mt-12 relative max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl">
         <div className="aspect-video rounded-lg overflow-hidden">
           <Image
             src={mainImage}
@@ -47,34 +38,16 @@ export default function Hero() {
             fill
             className="object-cover"
             priority
-            sizes="(max-width: 640px) 100vw,    /* Mobilde %100 genişlik */
-             (max-width: 768px) 75vw,     /* Küçük tabletlerde %75 */
-             (max-width: 1024px) 66vw,    /* Büyük tabletlerde %66 */
-             800px" /* Daha geniş ekranlarda sabit sınır */
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 75vw, (max-width: 1024px) 66vw, 800px"
           />
         </div>
       </div>
-
-      {/* Thumbnail Galeri */}
-      <div
-        className="grid
-                grid-cols-2        /* En küçük cihazda 2 kolon */
-                sm:grid-cols-3     /* Küçük ekran (≥640px) 3 kolon */
-                md:grid-cols-4     /* Orta ekran (≥768px) 4 kolon */
-                gap-3              /* Daha sıkı aralık */
-                max-w-full
-                sm:max-w-xl
-                md:max-w-2xl
-                lg:max-w-3xl
-                mx-auto
-                mt-4"
-      >
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto mt-4">
         {images.map(({ src, alt }, idx) => (
           <button
             key={idx}
             onClick={() => setMainImage(src)}
-            className="focus:outline-none focus:ring-2 focus:ring-blue-500
-                 rounded-lg overflow-hidden"
+            className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg overflow-hidden"
           >
             <div className="aspect-square w-full relative">
               <Image
@@ -88,13 +61,9 @@ export default function Hero() {
           </button>
         ))}
       </div>
-
-      {/* Öne Çıkan İstatistikler */}
       <div className="mt-15 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {/* İstatistik Kartı 1 */}
-        <div className="flex flex-col items-center text-center">
-          <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
-            {/* İkon */}
+        <StatisticCard
+          icon={
             <svg
               width="36"
               height="36"
@@ -115,17 +84,12 @@ export default function Hero() {
                 />
               </g>
             </svg>
-          </div>
-          <p className="mt-4 text-2xl font-semibold text-blue-700">
-            {t("stats.reviews.count")}
-          </p>
-          <p className="text-gray-700">{t("stats.reviews.label")}</p>
-        </div>
-
-        {/* İstatistik Kartı 2 */}
-        <div className="flex flex-col items-center text-center">
-          <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
-            {/* İkon */}
+          }
+          count={t("stats.reviews.count")}
+          label={t("stats.reviews.label")}
+        />
+        <StatisticCard
+          icon={
             <svg
               width="37"
               height="37"
@@ -154,13 +118,27 @@ export default function Hero() {
                 strokeLinecap="round"
               />
             </svg>
-          </div>
-          <p className="mt-4 text-2xl font-semibold text-blue-700">
-            {t("stats.satisfaction.count")}
-          </p>
-          <p className="text-gray-700">{t("stats.satisfaction.label")}</p>
-        </div>
+          }
+          count={t("stats.satisfaction.count")}
+          label={t("stats.satisfaction.label")}
+        />
       </div>
     </div>
   );
 }
+
+interface StatisticCardProps {
+  icon: React.ReactNode;
+  count: string | number;
+  label: string;
+}
+
+const StatisticCard = ({ icon, count, label }: StatisticCardProps) => (
+  <div className="flex flex-col items-center text-center">
+    <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
+      {icon}
+    </div>
+    <p className="mt-4 text-2xl font-semibold text-blue-700">{count}</p>
+    <p className="text-gray-700">{label}</p>
+  </div>
+);

@@ -1,4 +1,3 @@
-// components/LanguageToggle.tsx
 "use client";
 
 import { useLocale } from "next-intl";
@@ -24,7 +23,7 @@ export default function LanguageToggle() {
         const params = new URLSearchParams(searchParams.toString());
         const cleanPathname = pathname
           ? pathname.replace(`/${locale}`, "")
-          : ""; // Remove current locale from the path
+          : "";
         router.push(`/${newLocale}${cleanPathname}?${params.toString()}`);
       }
     },

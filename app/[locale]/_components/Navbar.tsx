@@ -20,16 +20,12 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="w-full text-white">
-      {/* Top Promo Banner */}
       <div className="bg-gradient-to-r from-violet-600 via-purple-700 to-blue-800 text-center text-xs sm:text-sm py-1">
         {t("promoText")}{" "}
         <span className="font-semibold">{t("promoDiscount")}</span>
       </div>
-
-      {/* Main Navigation */}
       <nav className="bg-blue-900 shadow-md sticky top-0 z-50">
         <div className="container mx-auto flex items-center justify-between xl:justify-center xl:gap-20 px-4 sm:px-6 lg:px-8 h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
@@ -39,7 +35,6 @@ const Navbar: React.FC = () => {
               className="object-contain"
             />
           </Link>
-          {/* Desktop Links */}
           <ul className="hidden md:flex space-x-8 font-medium text-white">
             {[
               { name: t("home"), href: "/" },
@@ -57,8 +52,6 @@ const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
-
-          {/* Actions */}
           <div className="flex items-center space-x-2 md:space-x-4 lg:space-x-6 xl:space-x-10">
             <LanguageToggle />
             <Link href="/reservation">
@@ -70,7 +63,6 @@ const Navbar: React.FC = () => {
               </Button>
             </Link>
 
-            {/* Mobile Menu Button */}
             <div className="flex md:hidden">
               <Sheet>
                 <SheetTrigger asChild>

@@ -23,30 +23,19 @@ function ContactPage() {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) {
-        throw new Error(t("errorMessage"));
-      }
+      if (!response.ok) throw new Error(t("errorMessage"));
 
       toast.success(t("successMessage"), {
-        style: {
-          backgroundColor: "#22c55e",
-          color: "#ffffff",
-        },
+        style: { backgroundColor: "#22c55e", color: "#ffffff" },
       });
     } catch (error) {
       console.error(error);
-
       toast.error(t("failureMessage"), {
-        style: {
-          backgroundColor: "#ef4444",
-          color: "#ffffff",
-        },
+        style: { backgroundColor: "#ef4444", color: "#ffffff" },
       });
     }
   };
@@ -65,16 +54,13 @@ function ContactPage() {
           <p className="text-sm text-gray-500 text-center pb-10">
             {t("description")}
           </p>
-
           <div className="flex flex-col md:flex-row items-center gap-8 w-full max-w-2xl">
             <div className="w-full">
               <label className="text-black/70" htmlFor="name">
                 {t("nameLabel")}
               </label>
               <input
-                {...register("name", {
-                  required: t("nameRequired"),
-                })}
+                {...register("name", { required: t("nameRequired") })}
                 className="h-14 p-4 mt-2 w-full border border-gray-300 rounded-lg outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition"
                 type="text"
                 placeholder={t("namePlaceholder")}
@@ -108,15 +94,12 @@ function ContactPage() {
               )}
             </div>
           </div>
-
           <div className="mt-6 w-full max-w-2xl">
             <label className="text-black/70" htmlFor="message">
               {t("messageLabel")}
             </label>
             <textarea
-              {...register("message", {
-                required: t("messageRequired"),
-              })}
+              {...register("message", { required: t("messageRequired") })}
               className="w-full mt-2 p-4 h-48 border border-gray-300 rounded-lg resize-none outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition"
               placeholder={t("messagePlaceholder")}
             ></textarea>
@@ -126,7 +109,6 @@ function ContactPage() {
               </p>
             )}
           </div>
-
           <button
             type="submit"
             disabled={isSubmitting}
