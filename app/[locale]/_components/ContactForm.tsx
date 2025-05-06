@@ -3,6 +3,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 interface ContactFormData {
   name: string;
@@ -11,6 +12,7 @@ interface ContactFormData {
 }
 
 function ContactPage() {
+  const t = useTranslations("ContactForm");
   const {
     register,
     handleSubmit,
@@ -28,10 +30,10 @@ function ContactPage() {
       });
 
       if (!response.ok) {
-        throw new Error("Mesaj gönderilirken bir hata oluştu.");
+        throw new Error(t("errorMessage"));
       }
 
-      toast.success("Mesajınız başarıyla gönderildi!", {
+      toast.success(t("successMessage"), {
         style: {
           backgroundColor: "#22c55e",
           color: "#ffffff",
@@ -40,7 +42,7 @@ function ContactPage() {
     } catch (error) {
       console.error(error);
 
-      toast.error("Mesaj gönderilemedi. Lütfen tekrar deneyin.", {
+      toast.error(t("failureMessage"), {
         style: {
           backgroundColor: "#ef4444",
           color: "#ffffff",
@@ -50,35 +52,32 @@ function ContactPage() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 px-4 md:px-8 max-w-6xl mx-auto ">
+    <div className="flex flex-col md:flex-row gap-8 px-4 md:px-8 max-w-6xl mx-auto mt-15">
       <div className="flex-1">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col items-center text-sm"
         >
-          <p className="text-lg text-blue-600 font-medium pb-2">Bize Ulaşın</p>
-          <h1 className="text-4xl font-semibold text-slate-700 pb-4 text-center">
-            Bizimle İletişime Geçin
+          <h1 className="text-4xl font-semibold text-blue-900 pb-4 text-center">
+            {t("title")}{" "}
+            <span className="text-amber-500">{t("highlight")}</span>
           </h1>
           <p className="text-sm text-gray-500 text-center pb-10">
-            Lorem Ipsum, matbaacılık ve dizgi endüstrisinde kullanılan mıgır
-            metinlerdir.
-            <br />
-            Lorem Ipsum, endüstrinin standart mıgır metni olmuştur.
+            {t("description")}
           </p>
 
           <div className="flex flex-col md:flex-row items-center gap-8 w-full max-w-2xl">
             <div className="w-full">
               <label className="text-black/70" htmlFor="name">
-                Adınız
+                {t("nameLabel")}
               </label>
               <input
                 {...register("name", {
-                  required: "Adınızı girmeniz gerekiyor",
+                  required: t("nameRequired"),
                 })}
                 className="h-14 p-4 mt-2 w-full border border-gray-300 rounded-lg outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition"
                 type="text"
-                placeholder="Adınızı girin"
+                placeholder={t("namePlaceholder")}
               />
               {errors.name && (
                 <p className="text-red-500 text-xs mt-1">
@@ -88,19 +87,19 @@ function ContactPage() {
             </div>
             <div className="w-full">
               <label className="text-black/70" htmlFor="email">
-                E-posta Adresiniz
+                {t("emailLabel")}
               </label>
               <input
                 {...register("email", {
-                  required: "E-posta adresinizi girmeniz gerekiyor",
+                  required: t("emailRequired"),
                   pattern: {
                     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                    message: "Geçerli bir e-posta adresi girin",
+                    message: t("emailInvalid"),
                   },
                 })}
                 className="h-14 p-4 mt-2 w-full border border-gray-300 rounded-lg outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition"
                 type="email"
-                placeholder="E-posta adresinizi girin"
+                placeholder={t("emailPlaceholder")}
               />
               {errors.email && (
                 <p className="text-red-500 text-xs mt-1">
@@ -112,14 +111,14 @@ function ContactPage() {
 
           <div className="mt-6 w-full max-w-2xl">
             <label className="text-black/70" htmlFor="message">
-              Mesajınız
+              {t("messageLabel")}
             </label>
             <textarea
               {...register("message", {
-                required: "Mesajınızı girmeniz gerekiyor",
+                required: t("messageRequired"),
               })}
               className="w-full mt-2 p-4 h-48 border border-gray-300 rounded-lg resize-none outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition"
-              placeholder="Mesajınızı girin"
+              placeholder={t("messagePlaceholder")}
             ></textarea>
             {errors.message && (
               <p className="text-red-500 text-xs mt-1">
@@ -133,7 +132,7 @@ function ContactPage() {
             disabled={isSubmitting}
             className="mt-5 bg-blue-600 text-white h-14 w-full md:w-64 px-6 rounded-lg active:scale-95 transition disabled:opacity-50"
           >
-            {isSubmitting ? "Gönderiliyor..." : "Mesaj Gönder"}
+            {isSubmitting ? t("submitting") : t("submit")}
           </button>
         </form>
       </div>

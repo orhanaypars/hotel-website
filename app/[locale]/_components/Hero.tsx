@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const images = [
   { src: "/slider1.jpg", alt: "Oda 1" },
@@ -10,6 +11,7 @@ const images = [
 ];
 
 export default function Hero() {
+  const t = useTranslations("Hero");
   const [mainImage, setMainImage] = useState(images[0].src);
 
   return (
@@ -17,14 +19,16 @@ export default function Hero() {
       {/* Başlık ve Açıklama */}
       <section className="mt-8 md:mt-28 flex flex-col items-center text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
-          Alsancak&apos;ın kalbindeki
+          {t("title")}
           <span className="block text-blue-700 mt-2">
-            en <span className="font-bold text-amber-600">modern</span> yuva.
+            {t("subtitle.part1")}{" "}
+            <span className="font-bold text-amber-600">
+              {t("subtitle.part2")}
+            </span>
           </span>
         </h1>
         <p className="mt-6 text-gray-700 text-md sm:text-lg md:text-xl max-w-2xl">
-          Kişiselleştirilmiş hizmetin, zarif tasarımın ve unutulmaz deneyimlerin
-          büyüsünü keşfedin. Hayalinizdeki kaçamak burada başlıyor.
+          {t("description")}
         </p>
       </section>
 
@@ -112,8 +116,10 @@ export default function Hero() {
               </g>
             </svg>
           </div>
-          <p className="mt-4 text-2xl font-semibold text-blue-700">300+</p>
-          <p className="text-gray-700">5 Yıldızlı Yorum</p>
+          <p className="mt-4 text-2xl font-semibold text-blue-700">
+            {t("stats.reviews.count")}
+          </p>
+          <p className="text-gray-700">{t("stats.reviews.label")}</p>
         </div>
 
         {/* İstatistik Kartı 2 */}
@@ -149,8 +155,10 @@ export default function Hero() {
               />
             </svg>
           </div>
-          <p className="mt-4 text-2xl font-semibold text-blue-700">100%</p>
-          <p className="text-gray-700">Misafir Memnuniyeti</p>
+          <p className="mt-4 text-2xl font-semibold text-blue-700">
+            {t("stats.satisfaction.count")}
+          </p>
+          <p className="text-gray-700">{t("stats.satisfaction.label")}</p>
         </div>
       </div>
     </div>

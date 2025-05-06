@@ -9,5 +9,88 @@
     "contact": "İletişim",
     "makeReservation": "Rezervasyon Yap",
     "menu": "Menü"
+  },
+  "Hero": {
+    "title": "Alsancak'ın kalbindeki",
+    "subtitle": {
+      "part1": "en",
+      "part2": "modern otel"
+    },
+    "description": "Kişiselleştirilmiş hizmetin, zarif tasarımın ve unutulmaz deneyimlerin büyüsünü keşfedin. Hayalinizdeki kaçamak burada başlıyor.",
+    "stats": {
+      "reviews": {
+        "count": "300+",
+        "label": "5 Yıldızlı Yorumlar"
+      },
+      "satisfaction": {
+        "count": "100%",
+        "label": "Misafir Memnuniyeti"
+      }
+    }
+  },
+  "Reservation": {
+    "title": "Rezervasyon Yapın",
+    "subtitle": "Konaklamanızı planlayın ve unutulmaz bir deneyim yaşayın.",
+    "checkIn": "Giriş Tarihi",
+    "checkOut": "Çıkış Tarihi",
+    "guests": "Misafirler",
+    "bookNow": "Şimdi Rezervasyon Yap",
+    "toast": {
+      "success": "Rezervasyon başarıyla gönderildi!",
+      "error": "Rezervasyon gönderilirken bir hata oluştu."
+    },
+    "header": {
+      "quickReservation": "Hızlı",
+      "request": "Rezervasyon ile",
+      "beOurGuest": "Misafirimiz Olun"
+    },
+    "form": {
+      "email": {
+        "label": "E-posta",
+        "placeholder": "E-posta adresinizi girin",
+        "required": "E-posta adresi gereklidir."
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "Telefon numaranızı girin",
+        "required": "Telefon numarası gereklidir."
+      },
+      "checkIn": {
+        "label": "Giriş Tarihi",
+        "required": "Giriş tarihi gereklidir."
+      },
+      "checkOut": {
+        "label": "Çıkış Tarihi",
+        "required": "Çıkış tarihi gereklidir."
+      },
+      "guests": {
+        "label": "Misafir Sayısı",
+        "placeholder": "Misafir sayısını girin",
+        "required": "Misafir sayısı gereklidir.",
+        "min": "En az 1 misafir olmalıdır.",
+        "max": "En fazla 4 misafir olabilir."
+      },
+      "submit": "Gönder"
+    }
+  },
+  "ContactForm": {
+    "title": "Bizimle",
+    "highlight": "İletişime",
+    "description": "İletişim formunu doldurarak bizimle iletişime geçebilirsiniz. Sorularınızı, önerilerinizi veya geri bildirimlerinizi bize iletmekten çekinmeyin.",
+    "nameLabel": "Adınız",
+    "namePlaceholder": "Adınızı girin",
+    "nameRequired": "Adınızı girmeniz gerekiyor.",
+    "emailLabel": "E-posta Adresiniz",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "emailRequired": "E-posta adresinizi girmeniz gerekiyor.",
+    "emailInvalid": "Geçerli bir e-posta adresi girin.",
+    "messageLabel": "Mesajınız",
+    "messagePlaceholder": "Mesajınızı girin",
+    "messageRequired": "Mesajınızı girmeniz gerekiyor.",
+    "submit": "Mesaj Gönder",
+    "submitting": "Gönderiliyor...",
+    "successMessage": "Mesajınız başarıyla gönderildi!",
+    "failureMessage": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+    "errorMessage": "Mesaj gönderilirken bir hata oluştu."
   }
 }

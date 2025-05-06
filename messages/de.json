@@ -9,5 +9,88 @@
     "contact": "Kontakt",
     "makeReservation": "Reservierung vornehmen",
     "menu": "Menü"
+  },
+  "Hero": {
+    "title": "Im Herzen von Alsancak",
+    "subtitle": {
+      "part1": "das",
+      "part2": "modernste Hotel"
+    },
+    "description": "Entdecken Sie die Magie von persönlichem Service, elegantem Design und unvergesslichen Erlebnissen. Ihr Traumurlaub beginnt hier.",
+    "stats": {
+      "reviews": {
+        "count": "300+",
+        "label": "5-Sterne-Bewertungen"
+      },
+      "satisfaction": {
+        "count": "100%",
+        "label": "Gästezufriedenheit"
+      }
+    }
+  },
+  "Reservation": {
+    "title": "Reservierung vornehmen",
+    "subtitle": "Planen Sie Ihren Aufenthalt und genießen Sie ein unvergessliches Erlebnis.",
+    "checkIn": "Anreisedatum",
+    "checkOut": "Abreisedatum",
+    "guests": "Gäste",
+    "bookNow": "Jetzt buchen",
+    "toast": {
+      "success": "Reservierung erfolgreich übermittelt!",
+      "error": "Beim Übermitteln der Reservierung ist ein Fehler aufgetreten."
+    },
+    "header": {
+      "quickReservation": "Schnelle",
+      "request": "Reservierung",
+      "beOurGuest": "Seien Sie unser Gast"
+    },
+    "form": {
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+        "required": "E-Mail-Adresse ist erforderlich."
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "Geben Sie Ihre Telefonnummer ein",
+        "required": "Telefonnummer ist erforderlich."
+      },
+      "checkIn": {
+        "label": "Anreisedatum",
+        "required": "Anreisedatum ist erforderlich."
+      },
+      "checkOut": {
+        "label": "Abreisedatum",
+        "required": "Abreisedatum ist erforderlich."
+      },
+      "guests": {
+        "label": "Anzahl der Gäste",
+        "placeholder": "Geben Sie die Anzahl der Gäste ein",
+        "required": "Anzahl der Gäste ist erforderlich.",
+        "min": "Mindestens 1 Gast ist erforderlich.",
+        "max": "Maximal 4 Gäste sind erlaubt."
+      },
+      "submit": "Absenden"
+    }
+  },
+  "ContactForm": {
+    "title": "Kontaktieren",
+    "highlight": "Sie uns",
+    "description": "Füllen Sie das Kontaktformular aus, um uns zu erreichen. Zögern Sie nicht, uns Ihre Fragen, Vorschläge oder Rückmeldungen mitzuteilen.",
+    "nameLabel": "Ihr Name",
+    "namePlaceholder": "Geben Sie Ihren Namen ein",
+    "nameRequired": "Ihr Name ist erforderlich.",
+    "emailLabel": "Ihre E-Mail-Adresse",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "emailRequired": "Ihre E-Mail-Adresse ist erforderlich.",
+    "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "messageLabel": "Ihre Nachricht",
+    "messagePlaceholder": "Geben Sie Ihre Nachricht ein",
+    "messageRequired": "Ihre Nachricht ist erforderlich.",
+    "submit": "Nachricht senden",
+    "submitting": "Wird gesendet...",
+    "successMessage": "Ihre Nachricht wurde erfolgreich gesendet!",
+    "failureMessage": "Das Senden der Nachricht ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "errorMessage": "Beim Senden der Nachricht ist ein Fehler aufgetreten."
   }
 }

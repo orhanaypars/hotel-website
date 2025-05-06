@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Label } from "@/components/ui/label";
+import { useTranslations } from "next-intl";
 
 interface ReservationFormData {
   email: string;
@@ -16,29 +17,26 @@ interface ReservationFormData {
 }
 
 const Reservation: React.FC = () => {
+  const t = useTranslations("Reservation");
+
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<ReservationFormData>();
 
-  // State for date inputs
   const [checkInDate, setCheckInDate] = useState<string>("");
   const [checkOutDate, setCheckOutDate] = useState<string>("");
 
-  // Compute today's date in YYYY-MM-DD
   const today = new Date().toISOString().split("T")[0];
 
-  // Ensure check-out is always after check-in
   useEffect(() => {
     if (checkInDate) {
-      // If no check-out set, default to next day
       if (!checkOutDate) {
         const next = new Date(checkInDate);
         next.setDate(next.getDate() + 1);
         setCheckOutDate(next.toISOString().split("T")[0]);
       }
-      // If checkout <= checkin, bump checkout
       if (checkOutDate && checkOutDate <= checkInDate) {
         const next = new Date(checkInDate);
         next.setDate(next.getDate() + 1);
@@ -65,12 +63,12 @@ const Reservation: React.FC = () => {
         throw new Error("Mesaj gönderilirken bir hata oluştu.");
       }
 
-      toast.success("Rezervasyon talebiniz başarıyla gönderildi!", {
+      toast.success(t("toast.success"), {
         style: { backgroundColor: "#22c55e", color: "#ffffff" },
       });
     } catch (error) {
       console.error(error);
-      toast.error("Rezervasyon talebi gönderilemedi. Lütfen tekrar deneyin.", {
+      toast.error(t("toast.error"), {
         style: { backgroundColor: "#ef4444", color: "#ffffff" },
       });
     }
@@ -79,12 +77,14 @@ const Reservation: React.FC = () => {
   return (
     <div className="flex flex-col items-center text-center mt-12 mb-12 px-4 sm:px-8 lg:px-20">
       <div className="mb-12">
-        <h1 className="text-4xl font-semibold text-blue-700">
-          Hızlıca <span className="text-amber-500 font-bold">rezervasyon</span>{" "}
-          talebinizi oluşturun.
+        <h1 className="text-5xl font-semibold text-blue-700">
+          {t("header.quickReservation")}{" "}
+          <span className="text-amber-500 font-bold">
+            {t("header.request")}
+          </span>
           <div className="mt-10"></div>
-          <span className="text-5xl font-bold text-blue-900">
-            Ayrıcalıklı odalarımızda misafirimiz olun.
+          <span className="text-6xl font-bold text-blue-900">
+            {t("header.beOurGuest")}
           </span>
         </h1>
       </div>
@@ -94,19 +94,18 @@ const Reservation: React.FC = () => {
         className="w-full max-w-screen-lg mx-auto bg-gray-50 shadow-md rounded-lg p-6"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
-          {/* Email */}
           <div>
             <Label
               htmlFor="email"
               className="block mb-1 font-medium text-gray-700"
             >
-              E-posta
+              {t("form.email.label")}
             </Label>
             <Input
               id="email"
               type="email"
-              {...register("email", { required: "E-posta gerekli." })}
-              placeholder="ornek@gmail.com"
+              {...register("email", { required: t("form.email.required") })}
+              placeholder={t("form.email.placeholder")}
             />
             {errors.email && (
               <p className="text-red-500 text-sm mt-1">
@@ -115,19 +114,18 @@ const Reservation: React.FC = () => {
             )}
           </div>
 
-          {/* Telefon */}
           <div>
             <Label
               htmlFor="phone"
               className="block mb-1 font-medium text-gray-700"
             >
-              Telefon
+              {t("form.phone.label")}
             </Label>
             <Input
               id="phone"
               type="tel"
-              {...register("phone", { required: "Telefon numarası gerekli." })}
-              placeholder="053X XXX XX XX"
+              {...register("phone", { required: t("form.phone.required") })}
+              placeholder={t("form.phone.placeholder")}
             />
             {errors.phone && (
               <p className="text-red-500 text-sm mt-1">
@@ -136,18 +134,17 @@ const Reservation: React.FC = () => {
             )}
           </div>
 
-          {/* Check-In */}
           <div>
             <Label
               htmlFor="checkIn"
               className="block mb-1 font-medium text-gray-700"
             >
-              Giriş Tarihi
+              {t("form.checkIn.label")}
             </Label>
             <Input
               id="checkIn"
               type="date"
-              {...register("checkIn", { required: "Giriş tarihi gerekli." })}
+              {...register("checkIn", { required: t("form.checkIn.required") })}
               value={checkInDate}
               onChange={(e) => setCheckInDate(e.target.value)}
               min={today}
@@ -159,18 +156,19 @@ const Reservation: React.FC = () => {
             )}
           </div>
 
-          {/* Check-Out */}
           <div>
             <Label
               htmlFor="checkOut"
               className="block mb-1 font-medium text-gray-700"
             >
-              Çıkış Tarihi
+              {t("form.checkOut.label")}
             </Label>
             <Input
               id="checkOut"
               type="date"
-              {...register("checkOut", { required: "Çıkış tarihi gerekli." })}
+              {...register("checkOut", {
+                required: t("form.checkOut.required"),
+              })}
               value={checkOutDate}
               onChange={(e) => setCheckOutDate(e.target.value)}
               min={
@@ -192,23 +190,22 @@ const Reservation: React.FC = () => {
             )}
           </div>
 
-          {/* Guests */}
           <div className="col-span-1 sm:col-span-2 md:col-span-1">
             <Label
               htmlFor="guests"
               className="block mb-1 font-medium text-gray-700"
             >
-              Kişi Sayısı
+              {t("form.guests.label")}
             </Label>
             <Input
               id="guests"
               type="number"
               {...register("guests", {
-                required: "Kişi sayısı gerekli.",
-                min: { value: 1, message: "En az 1 kişi olmalı." },
-                max: { value: 4, message: "En fazla 4 kişi olabilir." },
+                required: t("form.guests.required"),
+                min: { value: 1, message: t("form.guests.min") },
+                max: { value: 4, message: t("form.guests.max") },
               })}
-              placeholder="2"
+              placeholder={t("form.guests.placeholder")}
             />
             {errors.guests && (
               <p className="text-red-500 text-sm mt-1">
@@ -217,14 +214,13 @@ const Reservation: React.FC = () => {
             )}
           </div>
 
-          {/* Submit */}
           <div className="col-span-1 sm:col-span-2 md:col-span-5 flex items-end justify-center">
             <Button
               type="submit"
               disabled={isSubmitting}
               className="w-full md:w-auto rounded-md bg-blue-600 py-2 text-white flex items-center justify-center gap-2 hover:bg-blue-700"
             >
-              Talep oluştur
+              {t("form.submit")}
             </Button>
           </div>
         </div>

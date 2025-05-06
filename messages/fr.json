@@ -9,5 +9,88 @@
     "contact": "Contact",
     "makeReservation": "Faire une réservation",
     "menu": "Menu"
+  },
+  "Hero": {
+    "title": "Au cœur d'Alsancak",
+    "subtitle": {
+      "part1": "l'hôtel le plus",
+      "part2": "moderne"
+    },
+    "description": "Découvrez la magie d'un service personnalisé, d'un design élégant et d'expériences inoubliables. Votre escapade de rêve commence ici.",
+    "stats": {
+      "reviews": {
+        "count": "300+",
+        "label": "Avis 5 étoiles"
+      },
+      "satisfaction": {
+        "count": "100%",
+        "label": "Satisfaction des clients"
+      }
+    }
+  },
+  "Reservation": {
+    "title": "Faire une réservation",
+    "subtitle": "Planifiez votre séjour et profitez d'une expérience inoubliable.",
+    "checkIn": "Date d'arrivée",
+    "checkOut": "Date de départ",
+    "guests": "Invités",
+    "bookNow": "Réservez maintenant",
+    "toast": {
+      "success": "Réservation envoyée avec succès !",
+      "error": "Une erreur s'est produite lors de l'envoi de la réservation."
+    },
+    "header": {
+      "quickReservation": "Réservation rapide",
+      "request": "Demande",
+      "beOurGuest": "Soyez notre invité"
+    },
+    "form": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Entrez votre adresse e-mail",
+        "required": "L'adresse e-mail est obligatoire."
+      },
+      "phone": {
+        "label": "Téléphone",
+        "placeholder": "Entrez votre numéro de téléphone",
+        "required": "Le numéro de téléphone est obligatoire."
+      },
+      "checkIn": {
+        "label": "Date d'arrivée",
+        "required": "La date d'arrivée est obligatoire."
+      },
+      "checkOut": {
+        "label": "Date de départ",
+        "required": "La date de départ est obligatoire."
+      },
+      "guests": {
+        "label": "Nombre d'invités",
+        "placeholder": "Entrez le nombre d'invités",
+        "required": "Le nombre d'invités est obligatoire.",
+        "min": "Au moins 1 invité est requis.",
+        "max": "Un maximum de 4 invités est autorisé."
+      },
+      "submit": "Envoyer"
+    }
+  },
+  "ContactForm": {
+    "title": "Contactez",
+    "highlight": "Nous",
+    "description": "Remplissez le formulaire de contact pour nous joindre. N'hésitez pas à nous faire part de vos questions, suggestions ou commentaires.",
+    "nameLabel": "Votre nom",
+    "namePlaceholder": "Entrez votre nom",
+    "nameRequired": "Votre nom est requis.",
+    "emailLabel": "Votre adresse e-mail",
+    "emailPlaceholder": "Entrez votre adresse e-mail",
+    "emailRequired": "Votre adresse e-mail est requise.",
+    "emailInvalid": "Veuillez entrer une adresse e-mail valide.",
+    "messageLabel": "Votre message",
+    "messagePlaceholder": "Entrez votre message",
+    "messageRequired": "Votre message est requis.",
+    "submit": "Envoyer le message",
+    "submitting": "Envoi en cours...",
+    "successMessage": "Votre message a été envoyé avec succès !",
+    "failureMessage": "L'envoi du message a échoué. Veuillez réessayer.",
+    "errorMessage": "Une erreur s'est produite lors de l'envoi du message."
   }
 }

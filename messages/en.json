@@ -9,5 +9,88 @@
     "contact": "Contact",
     "makeReservation": "Make a Reservation",
     "menu": "Menu"
+  },
+  "Hero": {
+    "title": "In the heart of Alsancak",
+    "subtitle": {
+      "part1": "the most",
+      "part2": "modern hotel"
+    },
+    "description": "Discover the magic of personalized service, elegant design, and unforgettable experiences. Your dream getaway starts here.",
+    "stats": {
+      "reviews": {
+        "count": "300+",
+        "label": "5-Star Reviews"
+      },
+      "satisfaction": {
+        "count": "100%",
+        "label": "Guest Satisfaction"
+      }
+    }
+  },
+  "Reservation": {
+    "title": "Make a Reservation",
+    "subtitle": "Plan your stay and enjoy an unforgettable experience.",
+    "checkIn": "Check-In Date",
+    "checkOut": "Check-Out Date",
+    "guests": "Guests",
+    "bookNow": "Book Now",
+    "toast": {
+      "success": "Reservation submitted successfully!",
+      "error": "An error occurred while submitting the reservation."
+    },
+    "header": {
+      "quickReservation": "Quick",
+      "request": "Reservation",
+      "beOurGuest": "Be Our Guest"
+    },
+    "form": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email address",
+        "required": "Email address is required."
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Enter your phone number",
+        "required": "Phone number is required."
+      },
+      "checkIn": {
+        "label": "Check-In Date",
+        "required": "Check-in date is required."
+      },
+      "checkOut": {
+        "label": "Check-Out Date",
+        "required": "Check-out date is required."
+      },
+      "guests": {
+        "label": "Number of Guests",
+        "placeholder": "Enter the number of guests",
+        "required": "Number of guests is required.",
+        "min": "At least 1 guest is required.",
+        "max": "A maximum of 4 guests is allowed."
+      },
+      "submit": "Submit"
+    }
+  },
+  "ContactForm": {
+    "title": "Contact",
+    "highlight": "Us",
+    "description": "Fill out the contact form to get in touch with us. Feel free to share your questions, suggestions, or feedback.",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "nameRequired": "Your name is required.",
+    "emailLabel": "Your Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "emailRequired": "Your email address is required.",
+    "emailInvalid": "Please enter a valid email address.",
+    "messageLabel": "Your Message",
+    "messagePlaceholder": "Enter your message",
+    "messageRequired": "Your message is required.",
+    "submit": "Send Message",
+    "submitting": "Submitting...",
+    "successMessage": "Your message has been sent successfully!",
+    "failureMessage": "Failed to send the message. Please try again.",
+    "errorMessage": "An error occurred while sending the message."
   }
 }
