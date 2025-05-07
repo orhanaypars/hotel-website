@@ -26,6 +26,24 @@
         "count": "100%",
         "label": "Gästezufriedenheit"
       }
+    },
+    "features": {
+      "feature1": {
+        "title": "Kostenloses WLAN",
+        "description": "Bleiben Sie verbunden mit Highspeed-Internetzugang im gesamten Hotel."
+      },
+      "feature2": {
+        "title": "Videokonferenzen",
+        "description": "Modernste Videokonferenz-Einrichtungen für Ihre geschäftlichen Anforderungen."
+      },
+      "feature3": {
+        "title": "Kostenloses Parken",
+        "description": "Ausreichend Parkplätze für alle unsere Gäste verfügbar."
+      },
+      "feature4": {
+        "title": "Haustierfreundlich",
+        "description": "Wir heißen Ihre pelzigen Freunde herzlich willkommen."
+      }
     }
   },
   "Reservation": {

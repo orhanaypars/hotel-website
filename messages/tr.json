@@ -26,6 +26,24 @@
         "count": "100%",
         "label": "Misafir Memnuniyeti"
       }
+    },
+    "features": {
+      "feature1": {
+        "title": "Ücretsiz Wi-Fi",
+        "description": "Otel genelinde yüksek hızlı internet erişimiyle bağlantıda kalın."
+      },
+      "feature2": {
+        "title": "Video Konferans",
+        "description": "İş ihtiyaçlarınız için son teknoloji video konferans olanakları."
+      },
+      "feature3": {
+        "title": "Ücretsiz Otopark",
+        "description": "Tüm misafirlerimiz için bol miktarda otopark alanı mevcuttur."
+      },
+      "feature4": {
+        "title": "Evcil Hayvan Dostu",
+        "description": "Tüylü dostlarınızı memnuniyetle ağırlıyoruz."
+      }
     }
   },
   "Reservation": {

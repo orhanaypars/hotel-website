@@ -26,6 +26,24 @@
         "count": "100%",
         "label": "Satisfaction des clients"
       }
+    },
+    "features": {
+      "feature1": {
+        "title": "Wi-Fi gratuit",
+        "description": "Restez connecté avec un accès Internet haut débit dans tout l'hôtel."
+      },
+      "feature2": {
+        "title": "Visioconférences",
+        "description": "Installations de visioconférence à la pointe de la technologie pour vos besoins professionnels."
+      },
+      "feature3": {
+        "title": "Parking gratuit",
+        "description": "Des places de parking en abondance sont disponibles pour tous nos clients."
+      },
+      "feature4": {
+        "title": "Animaux acceptés",
+        "description": "Nous accueillons vos amis à fourrure à bras ouverts."
+      }
     }
   },
   "Reservation": {

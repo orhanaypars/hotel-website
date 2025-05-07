@@ -26,6 +26,24 @@
         "count": "100%",
         "label": "Guest Satisfaction"
       }
+    },
+    "features": {
+      "feature1": {
+        "title": "Free Wi-Fi",
+        "description": "Stay connected with high-speed internet access throughout the hotel."
+      },
+      "feature2": {
+        "title": "Video Conferencing",
+        "description": "State-of-the-art video conferencing facilities for your business needs."
+      },
+      "feature3": {
+        "title": "Free Parking",
+        "description": "Ample parking space available for all our guests."
+      },
+      "feature4": {
+        "title": "Pet Friendly",
+        "description": "We welcome your furry friends with open arms."
+      }
     }
   },
   "Reservation": {
@@ -135,6 +153,24 @@
       "alt": "User Image 3",
       "name": "Mehmet Kaya",
       "comment": "I stayed at your hotel during my business trip and was very satisfied. The service quality was excellent."
+    },
+    "features": {
+      "feature1": {
+        "title": "Free Wi-Fi",
+        "description": "Enjoy high-speed internet access throughout the hotel."
+      },
+      "feature2": {
+        "title": "Video Conferencing",
+        "description": "State-of-the-art video conferencing facilities for your business needs."
+      },
+      "feature3": {
+        "title": "Free Parking",
+        "description": "Ample parking space available for all our guests."
+      },
+      "feature4": {
+        "title": "Pet Friendly",
+        "description": "We welcome your furry friends with open arms."
+      }
     }
   },
   "Gallery": {
